@@ -30,4 +30,4 @@ fi
 # matter which distro we have
 #
 echo "Now For The Whole Kit And Kaboodle... Running Additional Scripts."
-
+run-parts --regex '*sh$' $PWD/General

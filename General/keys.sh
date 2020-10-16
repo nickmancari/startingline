@@ -3,6 +3,7 @@
 ###
 ####
 #####
+echo "##########LETS MAKE SSH KEYS##########"
 echo What would you like to name the key?
 #
 read KEYNAME
