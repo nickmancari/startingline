@@ -28,4 +28,6 @@ then
 fi
 # Next, we run the scripts that apply no 
 # matter which distro we have
+#
+echo "Now For The Whole Kit And Kaboodle... Running Additional Scripts."
 
