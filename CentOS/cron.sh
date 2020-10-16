@@ -1,5 +1,5 @@
 #!/bin/bash
-# All reoccuring automated jobs for an Ubuntu System go here
+# All reoccuring automated jobs for an CentOS System go here
 ##############
 ##############
 # Create cronjob to update sytem everyday and
