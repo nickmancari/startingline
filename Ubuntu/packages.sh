@@ -1,5 +1,5 @@
 #!/bin/bash
-## This script will install all my
+## This script will install all
 ## prefered Ubuntu packages
 #
-apt-get -y install golang-go ruby-full postgresql postgres-contrib
+apt-get -y install golang-go ruby-full postgresql postgres-contrib wget
