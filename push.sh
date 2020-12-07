@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "updating your git push" &&
+echo updating your git push ;
 
 	git add .
 
