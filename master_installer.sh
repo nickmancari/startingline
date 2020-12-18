@@ -26,6 +26,11 @@ then
 	else
 		        echo "Not CentOS, Skipping CentOS Scripts..."
 fi
+#
+# Real quick, let's setup Go
+#
+echo "Let's install Go"
+	$PWD/Go/go_setup.go;
 # Next, we run the scripts that apply no 
 # matter which distro we have
 #
