@@ -3,6 +3,6 @@
 ##
 #
 echo "alias 'xx=clear'" >> ~/.bashrc &&
-	echo "function cds() {cd $1 ; ls}" &&
+	echo "\nfunction cds() {cd $1 ; ls}" >> ~/.bashrc &&
 		echo "aliases are setup"
 exit
