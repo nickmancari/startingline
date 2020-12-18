@@ -8,3 +8,8 @@ Run the `master_installer.sh` script in your favorite Linux distro CLI and watch
 ```
 $ ./master_installer.sh
 ```
+
+<p></p>
+
+## Notes:
+* Will disgard CentOS setup and replace with another distro in the future. Thanks Red Hat
