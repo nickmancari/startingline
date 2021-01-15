@@ -20,11 +20,11 @@ else
 	echo "Not Ubuntu, Skipping Ubuntu Scripts..."
 fi
 ##
-if grep "CentOS" /etc/os-release &> /dev/null
+if grep "Debian" /etc/os-release &> /dev/null
 then
-	        $PWD/CentOS/everything.sh
+	        $PWD/Debian/everything.sh
 	else
-		        echo "Not CentOS, Skipping CentOS Scripts..."
+		        echo "Not Debian, Skipping Debian Scripts..."
 fi
 #
 # Real quick, let's setup Go

@@ -4,6 +4,12 @@
 <p></p>
 
 # Instructions:
+Download the repository:
+```
+$ git clone https://github.com/nickmancari/startlingline
+```
+`cd` into the `startingline` directory
+
 Run the `master_installer.sh` script in your favorite Linux distro CLI and watch the magic:
 ```
 $ ./master_installer.sh
@@ -12,4 +18,4 @@ $ ./master_installer.sh
 <p></p>
 
 ## Notes:
-* Will disgard CentOS setup and replace with another distro in the future. Thanks Red Hat
+* Removed CentOS
