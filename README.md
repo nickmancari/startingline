@@ -16,6 +16,10 @@ $ ./master_installer.sh
 ```
 
 <p></p>
+## To Do:
+[ ] Add compatibility with more Distros (Fedora, Mint, FreeBSD)
+[ ] Add more customized aliases
+[ ] Start a Raspbian setup
 
 ## Notes:
 * Removed CentOS
