@@ -7,7 +7,7 @@
 #
 whoami | grep 'root' &> /dev/null
         if [[ $? == 0 ]] ; then
-		                echo "you are root"
+		               sleep 5 ; echo "you are root"
 				        else echo "not root, please run as root user" && exit
 	fi
 # Then we check which distro is installed to
@@ -17,20 +17,41 @@ if grep "Ubuntu" /etc/os-release &> /dev/null
 then 
 	$PWD/Ubuntu/everything.sh
 else
-	echo "Not Ubuntu, Skipping Ubuntu Scripts..."
+	sleep 5 ; echo "Not Ubuntu, Skipping Ubuntu Scripts..."
 fi
 ##
 if grep "Debian" /etc/os-release &> /dev/null
 then
 	        $PWD/Debian/everything.sh
 	else
-		        echo "Not Debian, Skipping Debian Scripts..."
+		sleep 5 ; echo "Not Debian, Skipping Debian Scripts..."
 fi
-#
+##
+if grep "Fedora" /etc/os-release &> /dev/null
+then
+	$PWD/Fedora/everything.sh
+else
+	sleep 5 ; echo "Not Fedora, Skipping Fedora Scripts..."
+fi
+##
+if grep "Mint" /etc/os-release &> /dev/null
+then
+	$PWD/Mint/everything.sh
+else
+	sleep 5 ; echo "Not Mint, Skipping Mint Scripts..."
+fi
+if grep "FreeBSD" /etc/os-release &> /dev/null
+then
+	$PWD/FreeBSD/everything.sh
+else
+	sleep 5 ; echo "Not FreeBSD, Skipping FreeBSD Scripts..."
+fi
 # Real quick, let's setup Go
 #
+sleep 5 &&
+##
 echo "Let's install Go"
-	$PWD/Go/go_setup.go;
+	$PWD/Go/go_setup.sh;
 # Next, we run the scripts that apply no 
 # matter which distro we have
 #
