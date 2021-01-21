@@ -56,4 +56,4 @@ echo "Let's install Go"
 # matter which distro we have
 #
 echo "Now For The Whole Kit And Kaboodle... Running Additional Scripts."
-run-parts --regex '*sh$' $PWD/General
+for SCRIPT in $PWD/General/*; do $SCRIPT 2>/dev/null; done
