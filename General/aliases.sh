@@ -4,5 +4,7 @@
 #
 printf "alias 'xx=clear'" >> ~/.bashrc &&
 	printf "\nfunction cds() {\ncd $1 ; ls\n}" >> ~/.bashrc &&
-		echo "aliases are setup"
-exit
+		printf "\nfunction cdx() {\nclear ; cd $1 ; ls\n}" >> ~/.bashrc &&
+	
+	echo "aliases are setup"
+
