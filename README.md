@@ -19,7 +19,7 @@ $ ./master_installer.sh
 - [ ] Add compatibility with more Distros (Fedora, Mint, FreeBSD)
 - [ ] Add more customized aliases
 - [ ] Start a Raspbian setup
-- [x] Add seutp for vim go plugin
+- [x] Add setup for vim go plugin
 
 ### Notes:
 * Removed CentOS
