@@ -11,6 +11,7 @@ printf "alias 'xx=clear'" >> ~/.bashrc &&
 
 printf "\n"
 echo -e "\e[31m##############aliases are setup#################\e[0m"
+printf "\n"
 echo -e "!!!You have \e[7m3 \e[27mnew commands that will make your life easier: xx, cds, cdx!!!"
 printf "\n"
 echo "- <xx> is an alias for clear"
