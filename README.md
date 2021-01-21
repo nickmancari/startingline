@@ -10,7 +10,7 @@ $ git clone https://github.com/nickmancari/startlingline
 ```
 `cd` into the `startingline` directory
 
-Run the `master_installer.sh` script in your favorite Linux distro CLI and watch the magic:
+Run the `master_installer.sh` script as root in your favorite Linux distro CLI and watch the magic:
 ```
 $ ./master_installer.sh
 ```
