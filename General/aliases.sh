@@ -2,16 +2,16 @@
 ####
 ##
 #
-RED='\033[0;31m'
-NC='\033[0m'
+
 
 printf "alias 'xx=clear'" >> ~/.bashrc &&
 	printf "\nfunction cds() {\ncd \$1 ; ls\n}" >> ~/.bashrc &&
 		printf "\nfunction cdx() {\nclear ; cd \$1 ; ls\n}" >> ~/.bashrc &&
 	source ~/.bashrc
 
-echo -e "{RED}##############aliases are setup#################{NC}"
-echo "!!!You have 3 new commands that will make your life easier: xx, cds, cdx!!!"
+printf "\n"
+echo -e "\e[31m##############aliases are setup#################\e[0m"
+echo -e "!!!You have \e[7m3 \e[27mnew commands that will make your life easier: xx, cds, cdx!!!"
 printf "\n"
 echo "- <xx> is an alias for clear"
 echo "- <cds> puts you in a directory and then lists the content of that directory in one stroke"
