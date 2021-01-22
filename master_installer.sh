@@ -13,6 +13,8 @@ whoami | grep 'root' &> /dev/null
 		               sleep 5 ; echo "you are root"
 				        else echo "not root, please run as root user" && exit
 	fi
+#--------------Check package dependencies and install packages----------------#
+
 # Then we check which distro is installed to
 # get distro-specific install scripts
 #
