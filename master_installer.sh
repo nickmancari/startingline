@@ -1,6 +1,9 @@
 #!/bin/bash
 # 
-# 
+#
+####----Constants----#####
+#
+#
 # First we establish if the user
 # running the script is root
 # if not they can't run it
@@ -12,6 +15,7 @@ whoami | grep 'root' &> /dev/null
 	fi
 # Then we check which distro is installed to
 # get distro-specific install scripts
+#
 #
 if grep "Ubuntu" /etc/os-release &> /dev/null
 then 
@@ -46,6 +50,8 @@ then
 else
 	sleep 5 ; echo "Not FreeBSD, Skipping FreeBSD Scripts..."
 fi
+#---------------Will simplify ^^^ with function to cut repetition-------------------#
+
 # Real quick, let's setup Go
 #
 sleep 5 &&

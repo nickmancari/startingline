@@ -10,7 +10,7 @@ $ git clone https://github.com/nickmancari/startlingline
 ```
 `cd` into the `startingline` directory
 
-Run the `master_installer.sh` script as root in your favorite Linux distro CLI and watch the magic:
+Run the `master_installer.sh` script as root in your favorite Linux distro and watch the magic:
 ```
 $ ./master_installer.sh
 ```
@@ -20,6 +20,7 @@ $ ./master_installer.sh
 - [ ] Add more customized aliases
 - [ ] Start a Raspbian setup
 - [x] Add setup for vim go plugin
+- [ ] Simplify code in master_installer.sh with functions
 
 ### Notes:
 * Removed CentOS
