@@ -22,9 +22,9 @@ whoami | grep 'root' &> /dev/null
 function whatos() {
 	        if grep "$1" /etc/os-release &> /dev/null
 			        then
-				$PWD/$1/everything.sh
-					else
-				sleep 5 ; echo "Not $1, Skipping $1 Scripts..."
+					$PWD/$1/everything.sh
+				else
+					sleep 5 ; echo "Not $1, Skipping $1 Scripts..."
 		fi
 }
 
