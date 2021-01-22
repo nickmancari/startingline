@@ -19,39 +19,21 @@ whoami | grep 'root' &> /dev/null
 # get distro-specific install scripts
 #
 #
-if grep "Ubuntu" /etc/os-release &> /dev/null
-then 
-	$PWD/Ubuntu/everything.sh
-else
-	sleep 5 ; echo "Not Ubuntu, Skipping Ubuntu Scripts..."
-fi
-##
-if grep "Debian" /etc/os-release &> /dev/null
-then
-	        $PWD/Debian/everything.sh
-	else
-		sleep 5 ; echo "Not Debian, Skipping Debian Scripts..."
-fi
-##
-if grep "Fedora" /etc/os-release &> /dev/null
-then
-	$PWD/Fedora/everything.sh
-else
-	sleep 5 ; echo "Not Fedora, Skipping Fedora Scripts..."
-fi
-##
-if grep "Mint" /etc/os-release &> /dev/null
-then
-	$PWD/Mint/everything.sh
-else
-	sleep 5 ; echo "Not Mint, Skipping Mint Scripts..."
-fi
-if grep "FreeBSD" /etc/os-release &> /dev/null
-then
-	$PWD/FreeBSD/everything.sh
-else
-	sleep 5 ; echo "Not FreeBSD, Skipping FreeBSD Scripts..."
-fi
+function whatos() {
+	        if grep "$1" /etc/os-release &> /dev/null
+			        then
+				$PWD/$1/everything.sh
+					else
+				sleep 5 ; echo "Not $1, Skipping $1 Scripts..."
+		fi
+}
+
+whatos Ubuntu
+whatos Mint
+whatos Debian
+whatos FreeBSD
+#whatos Raspbian
+
 #---------------Will simplify ^^^ with function to cut repetition-------------------#
 
 # Real quick, let's setup Go
