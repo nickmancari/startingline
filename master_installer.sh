@@ -29,6 +29,7 @@ function whatos() {
 }
 
 whatos Ubuntu
+whatos Fedora
 whatos Mint
 whatos Debian
 whatos FreeBSD
