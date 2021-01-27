@@ -3,9 +3,9 @@
 # setup enviroment for Golang
 #
 wget -q --spider google.com
-	if [[ $? == 0 ]] ;
+	if [[ $? == 0 ]] ; then
 		:
-	else echo "Error: No wget installed or network connection not found."
+	else echo "\e[31Error\e[0m: No wget installed or network connection not found." && exit 1
 	fi
 
 wget https://dl.google.com/go/go1.13.linux-amd64.tar.gz &&
