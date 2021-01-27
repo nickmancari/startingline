@@ -11,7 +11,7 @@
 whoami | grep 'root' &> /dev/null
         if [[ $? == 0 ]] ; then
 		               sleep 5 ; echo "you are root"
-				        else echo "not root, please run as root user" && exit
+				        else echo "not root, please run as root user" && exit 1
 	fi
 #--------------Check package dependencies and install packages----------------#
 
