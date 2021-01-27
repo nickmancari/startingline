@@ -55,4 +55,4 @@ echo "Installing Network Scripts" &&
 	cp $PWD/Networking/ssh_agent.sh /etc/profile.d/ &&
 	source /etc/profile &&
 #
-echo "The ssh script is now in your profile. Add ssh key to it as you see fit." &&
+echo -e "\e[31mSSH Script is Now In Your Profile.\e[39m" &&
