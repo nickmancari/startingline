@@ -10,7 +10,7 @@
 #
 whoami | grep 'root' &> /dev/null
         if [[ $? == 0 ]] ; then
-		sleep 5 ; echo "you are root"
+		sleep 2 ; echo "you are root"
 	else echo "not root, please run as root user" && exit 1
 	fi
 #--------------Check package dependencies and install packages----------------#
@@ -23,7 +23,7 @@ function whatos() {
 	if grep "$1" /etc/os-release &> /dev/null; then
 		$PWD/$1/everything.sh
 	else
-		sleep 5 ; echo "Not $1, Skipping $1 Scripts..."
+		sleep 3 ; echo "Not $1, Skipping $1 Scripts..."
 	fi
 }
 
@@ -38,7 +38,7 @@ whatos FreeBSD
 
 # Real quick, let's setup Go
 #
-sleep 5 &&
+sleep 2 &&
 ##
 echo "Let's install Go"
 	$PWD/Go/go_setup.sh;
