@@ -2,6 +2,11 @@
 
 # setup enviroment for Golang
 #
+wget -q --spider google.com
+	if [[ $? == 0 ]] ;
+		:
+	else echo "Error: No wget installed or network connection not found."
+	fi
 
 wget https://dl.google.com/go/go1.13.linux-amd64.tar.gz &&
 	echo "You just downloaded Go.13"
@@ -11,4 +16,3 @@ wget https://dl.google.com/go/go1.13.linux-amd64.tar.gz &&
 echo "Setting up VIM plugin"
 	git clone https://github.com/fatih/vim-go.git ~/.vim/pack/plugins/start/vim-go
 echo "VIM Plugin is setup! You GO!"
-&& exit
