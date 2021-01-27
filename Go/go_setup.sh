@@ -5,7 +5,7 @@
 wget -q --spider google.com
 	if [[ $? == 0 ]] ; then
 		:
-	else echo "\e[31Error\e[0m: No wget installed or network connection not found." && exit 1
+	else echo "\e[31Error\e[0m: wget not installed" && exit 1
 	fi
 
 wget https://dl.google.com/go/go1.13.linux-amd64.tar.gz &&
