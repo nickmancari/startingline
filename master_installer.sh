@@ -48,3 +48,12 @@ echo "Let's install Go"
 #
 echo "Now For The Whole Kit And Kaboodle... Running Additional Scripts."
 for SCRIPT in $PWD/General/*; do $SCRIPT 2>/dev/null; done
+##
+##
+##
+echo "Installing Network Scripts" &&
+#	
+	cp $PWD/Networking/ssh_agent.sh /etc/profile.d/ &&
+	source /etc/profile &&
+#
+echo "The ssh script is now in your profile. Add ssh key to it as you see fit." &&
