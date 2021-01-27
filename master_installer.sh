@@ -10,8 +10,8 @@
 #
 whoami | grep 'root' &> /dev/null
         if [[ $? == 0 ]] ; then
-		               sleep 5 ; echo "you are root"
-				        else echo "not root, please run as root user" && exit 1
+		sleep 5 ; echo "you are root"
+	else echo "not root, please run as root user" && exit 1
 	fi
 #--------------Check package dependencies and install packages----------------#
 
@@ -20,11 +20,10 @@ whoami | grep 'root' &> /dev/null
 #
 #
 function whatos() {
-	if grep "$1" /etc/os-release &> /dev/null
-		then
-			$PWD/$1/everything.sh
-		else
-			sleep 5 ; echo "Not $1, Skipping $1 Scripts..."
+	if grep "$1" /etc/os-release &> /dev/null; then
+		$PWD/$1/everything.sh
+	else
+		sleep 5 ; echo "Not $1, Skipping $1 Scripts..."
 	fi
 }
 
