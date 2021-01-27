@@ -2,9 +2,12 @@
 # 
 #
 ####----Constants----#####
-# RED="\e[31m"
-# BLUE="\e[34m"
-# NC="\e[39m"
+#
+RED="\e[31m"
+BLUE="\e[34m"
+NC="\e[39m"
+LRED="\e[101m"
+NB="\e[49m"
 #
 #-----^^^Require Testing Befor Use^^^-----
 #
@@ -44,7 +47,7 @@ whatos FreeBSD
 #
 sleep 2 &&
 ##
-echo -e "Let's install \e[34mGo\e[39m"
+echo -e "Let's install ${BLUE}Go${NC}"
 	$PWD/Go/go_setup.sh;
 # Next, we run the scripts that apply no 
 # matter which distro we have
@@ -59,4 +62,6 @@ echo "Installing Network Scripts" &&
 	cp $PWD/Networking/ssh_agent.sh /etc/profile.d/ &&
 	source /etc/profile &&
 #
-echo -e "\e[31mSSH Script is Now In Your Profile.\e[39m" &&
+echo -e "${RED}SSH Script is Now In Your Profile.${NC}"
+echo -e "\n"
+echo -e "--------------------${LRED}Startingline Complete${NB}------------------------"
