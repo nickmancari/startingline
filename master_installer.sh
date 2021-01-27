@@ -8,6 +8,8 @@ BLUE="\e[34m"
 NC="\e[39m"
 LRED="\e[101m"
 NB="\e[49m"
+PUSH="              "
+BUFFER="\n\n"
 #
 #-----^^^Require Testing Befor Use^^^-----
 #
@@ -47,21 +49,20 @@ whatos FreeBSD
 #
 sleep 2 &&
 ##
-echo -e "Let's install ${BLUE}Go${NC}"
+echo -e "Let's install ${BLUE}Go${NC}${BUFFER}"
 	$PWD/Go/go_setup.sh;
 # Next, we run the scripts that apply no 
 # matter which distro we have
 #
-echo "Now For The Whole Kit And Kaboodle... Running Additional Scripts."
+echo "${PUSH}Now For The Whole Kit And Kaboodle... Running Additional Scripts.${BUFFER}"
 for SCRIPT in $PWD/General/*; do $SCRIPT 2>/dev/null; done
 ##
 ##
 ##
-echo "Installing Network Scripts" &&
+echo "${PUSH}Installing Network Scripts" &&
 #	
 	cp $PWD/Networking/ssh_agent.sh /etc/profile.d/ &&
 	source /etc/profile &&
 #
-echo -e "${RED}SSH Script is Now In Your Profile.${NC}"
-echo -e "\n"
+echo -e "${PUSH}${RED}SSH Script is Now In Your Profile.${NC}${BUFFER}"
 echo -e "--------------------${LRED}Startingline Complete${NB}------------------------"
