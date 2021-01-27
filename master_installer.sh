@@ -2,7 +2,11 @@
 # 
 #
 ####----Constants----#####
+# RED="\e[31m"
+# BLUE="\e[34m"
+# NC="\e[39m"
 #
+#-----^^^Require Testing Befor Use^^^-----
 #
 # First we establish if the user
 # running the script is root
@@ -40,7 +44,7 @@ whatos FreeBSD
 #
 sleep 2 &&
 ##
-echo "Let's install Go"
+echo -e "Let's install \e[34mGo\e[39m"
 	$PWD/Go/go_setup.sh;
 # Next, we run the scripts that apply no 
 # matter which distro we have
