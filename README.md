@@ -21,6 +21,7 @@ $ ./master_installer.sh
 - [ ] Start a Raspbian setup
 - [x] Add setup for vim go plugin
 - [ ] Simplify code in master_installer.sh with functions
+- [ ] Add more color to the scripts
 
 ### Notes:
 * Removed CentOS
