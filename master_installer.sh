@@ -33,9 +33,9 @@ whatos Fedora
 whatos Mint
 whatos Debian
 whatos FreeBSD
-#whatos Raspbian
+#whatos Raspbian -----> Setup coming soon
 
-#---------------Will simplify ^^^ with function to cut repetition-------------------#
+
 
 # Real quick, let's setup Go
 #
