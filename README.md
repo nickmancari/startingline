@@ -25,3 +25,4 @@ $ ./master_installer.sh
 
 ### Notes:
 * Removed CentOS
+* Research possible WSL integration
