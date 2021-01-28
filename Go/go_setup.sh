@@ -1,5 +1,5 @@
 #!/bin/bash
-# Contants
+# Constants
 BLUE="\e[34m"
 NC="\e[39m"
 RED="\e[31m"
