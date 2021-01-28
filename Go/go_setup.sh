@@ -5,7 +5,7 @@ NC="\e[39m"
 RED="\e[31m"
 LBLUE="\e[44m"
 NB="\e[49m"
-PUSH="              "
+PUSH="                         "
 # setup enviroment for Golang
 #
 wget -q --spider google.com

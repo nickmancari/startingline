@@ -8,7 +8,7 @@ BLUE="\e[34m"
 NC="\e[39m"
 LRED="\e[101m"
 NB="\e[49m"
-PUSH="              "
+PUSH="                        "
 BUFFER="\n\n"
 #
 #-----^^^Require Testing Befor Use^^^-----
@@ -19,7 +19,7 @@ BUFFER="\n\n"
 #
 whoami | grep 'root' &> /dev/null
         if [[ $? == 0 ]] ; then
-		sleep 2 ; echo "you are root"
+		sleep 2 ; echo -e "you are ${LRED}root${NB}"
 	else echo "not root, please run as root user" && exit 1
 	fi
 #--------------Check package dependencies and install packages----------------#
