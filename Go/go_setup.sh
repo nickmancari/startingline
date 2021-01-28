@@ -14,9 +14,9 @@ wget -q --spider google.com
 	else echo "${RED}Error${NC}: wget not installed" && exit 1
 	fi
 
-wget https://dl.google.com/go/go1.13.linux-amd64.tar.gz &&
+wget https://dl.google.com/go/go1.13.linux-amd64.tar.gz -P ~/ &&
 	echo -e "${PUSH}${BLUE}You just downloaded Go.13${NC}"
-	sudo tar -C /usr/local -xzf go1.13.linux-amd64.tar.gz &&
+	sudo tar -C /usr/local -xzf ~/go1.13.linux-amd64.tar.gz &&
 	echo "export PATH=$PATH:/usr/local/go/bin" >> /etc/profile && source /etc/profile &&
 	go run $PWD/Go/test_go.go &&
 echo "Setting up VIM plugin"
