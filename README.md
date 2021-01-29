@@ -22,6 +22,7 @@ $ ./master_installer.sh
 - [x] Add setup for vim go plugin
 - [ ] Simplify code in master_installer.sh with functions
 - [x] Add more color to the scripts
+- [ ] Change Go setup script to search for latest version
 
 ### Notes:
 * Removed CentOS
