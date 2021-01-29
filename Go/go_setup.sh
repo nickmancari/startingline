@@ -15,10 +15,11 @@ wget -q --spider google.com
 	fi
 
 wget https://dl.google.com/go/go1.13.linux-amd64.tar.gz -P ~/ &&
-	echo -e "${PUSH}${BLUE}You just downloaded Go.13${NC}"
-	sudo tar -C /usr/local -xzf ~/go1.13.linux-amd64.tar.gz &&
-	echo "export PATH=$PATH:/usr/local/go/bin" >> /etc/profile && source /etc/profile &&
-	go run $PWD/Go/test_go.go
+echo -e "${PUSH}${BLUE}You just downloaded Go.13${NC}"
+sudo tar -C /usr/local -xzf ~/go1.13.linux-amd64.tar.gz &&
+echo "export PATH=$PATH:/usr/local/go/bin" >> /etc/profile && source /etc/profile &&
+go get github.com/fatih/color &&
+go run $PWD/test_go.go
 	
 # <-------Need further testing for items below this----->
 

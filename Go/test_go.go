@@ -2,9 +2,12 @@ package main
 
 import (
 	
-	"fmt"
+	
+	"github.com/fatih/color"
 )
 
+
+
 func main() {
-	fmt.Println("\e[31mGo is installed\e[39m")
+	color.Cyan("Go is now installed")
 }
