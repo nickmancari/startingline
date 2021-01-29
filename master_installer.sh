@@ -20,7 +20,7 @@ BUFFER="\n\n"
 whoami | grep 'root' &> /dev/null
         if [[ $? == 0 ]] ; then
 		sleep 2 ; echo -e "you are ${LRED}root${NB}"
-	else echo "not root, please run as root user" && exit 1
+	else echo "not root, please run as root user" && return
 	fi
 #--------------Check package dependencies and install packages----------------#
 
