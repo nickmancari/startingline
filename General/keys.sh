@@ -5,9 +5,9 @@ PUSH="               "
 ####
 #####
 echo -e "${PUSH}##########LETS MAKE SSH KEYS##########"
-echo "Do you want make an SSH key? [y/n]"
-read YESORNO
-	if [[ "$YESORNO" == "n" ]]; then
+echo "Do you want make an SSH key? [y/n] [press enter]"
+read -s YESORNO
+	if [[ $YESORNO == n ]]; then
 		return
 	else :
 	fi
