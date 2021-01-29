@@ -51,12 +51,12 @@ echo -e "Let's install ${BLUE}Go${NC}${BUFFER}"
 #
 #-------------General Scripts----------#
 #
-echo "${PUSH}Now For The Whole Kit And Kaboodle... Running Additional Scripts.${BUFFER}"
+echo -e "${PUSH}Now For The Whole Kit And Kaboodle... Running Additional Scripts.${BUFFER}"
 for SCRIPT in $PWD/General/*; do $SCRIPT 2>/dev/null; done
 ##
 ##------------Network Scripts------------#
 ##
-echo "${PUSH}Installing Network Scripts" &&
+echo -e "${PUSH}Installing Network Scripts" &&
 #	
 	cp $PWD/Networking/ssh_agent.sh /etc/profile.d/ &&
 	source /etc/profile &&
