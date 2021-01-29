@@ -8,7 +8,7 @@ BLUE="\e[34m"
 NC="\e[39m"
 LRED="\e[101m"
 NB="\e[49m"
-PUSH="                        "
+PUSH="                              "
 BUFFER="\n\n"
 #
 #-----^^^Require Testing Befor Use^^^-----
