@@ -12,15 +12,22 @@ PUSH="                         "
 #----Check Enviroment----
 
 whoami | grep 'root' &> /dev/null
-	if [[ $? =! 0 ]]; then
+	if [[ $? != 0 ]]; then
 		echo -e "${RED}Error${NC}: root required"
-	else ;
+	else :
 	fi 
-
+	
+find $PWD/Go/go_setup.sh &> /dev/null
+	if [[ $? == 0 ]]; then
+		GPATH="$PWD/Go"
+	else
+		GPATH="$PWD"
+	fi
+	
 wget -q --spider google.com
-	if [[ $? =! 0 ]] ; then
+	if [[ $? != 0 ]] ; then
 		echo -e "${RED}Error${NC}: wget not installed" && return
-	else ;
+	else :
 	fi
 #----Done Enviroment Check
 #
@@ -29,12 +36,7 @@ echo -e "${PUSH}${BLUE}You just downloaded Go.13${NC}"
 sudo tar -C /usr/local -xzf ~/go1.13.linux-amd64.tar.gz &&
 echo "export PATH=$PATH:/usr/local/go/bin" >> /etc/profile && source /etc/profile &&
 go get github.com/fatih/color &&
-go run $PWD/Go/test_go.go
-	if [[ $? == 0 ]]; then 
-		:
-	else go run $PWD/test_go.go
-	fi
-	
+go run ${GPATH}/test_go.go	
 # <-------Need further testing for items below this----->
 
 # echo "Setting up VIM plugin"
