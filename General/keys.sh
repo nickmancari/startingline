@@ -1,9 +1,16 @@
 #!/bin/bash
 ##
-###
+# Constants
+PUSH="               "
 ####
 #####
-echo "##########LETS MAKE SSH KEYS##########"
+echo -e "${PUSH}##########LETS MAKE SSH KEYS##########"
+echo "Do you want make an SSH key? [y/n]"
+read YESORNO
+	if [[ "$YESORNO" == "n" ]]; then
+		return
+	else :
+	fi
 echo What would you like to name the key?
 #
 read KEYNAME
