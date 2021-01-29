@@ -13,10 +13,8 @@ BUFFER="\n\n"
 #
 #-----^^^Require Testing Befor Use^^^-----
 #
-# First we establish if the user
-# running the script is root
-# if not they can't run it
-#
+# check if user is root
+
 whoami | grep 'root' &> /dev/null
         if [[ $? == 0 ]] ; then
 		sleep 2 ; echo -e "you are ${LRED}root${NB}"
@@ -24,10 +22,9 @@ whoami | grep 'root' &> /dev/null
 	fi
 #--------------Check package dependencies and install packages----------------#
 
-# Then we check which distro is installed to
-# get distro-specific install scripts
-#
-#
+
+# Run distro scripts
+
 function whatos() {
 	if grep "$1" /etc/os-release &> /dev/null; then
 		$PWD/$1/everything.sh
@@ -45,19 +42,19 @@ whatos FreeBSD
 
 
 
-# Real quick, let's setup Go
 #
+#----------Go Setup------------#
 sleep 2 &&
 ##
 echo -e "Let's install ${BLUE}Go${NC}${BUFFER}"
 	$PWD/Go/go_setup.sh;
-# Next, we run the scripts that apply no 
-# matter which distro we have
+#
+#-------------General Scripts----------#
 #
 echo "${PUSH}Now For The Whole Kit And Kaboodle... Running Additional Scripts.${BUFFER}"
 for SCRIPT in $PWD/General/*; do $SCRIPT 2>/dev/null; done
 ##
-##
+##------------Network Scripts------------#
 ##
 echo "${PUSH}Installing Network Scripts" &&
 #	
