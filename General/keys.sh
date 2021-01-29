@@ -21,7 +21,7 @@ echo "Do you want make an SSH key? [y/n] [press enter]"
 read -s YESORNO
 	if [[ $YESORNO == n ]]; then
 		return
-	else keyfunc
+	else keyfunc()
 	fi
 #####
 ####
