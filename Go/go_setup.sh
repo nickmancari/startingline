@@ -13,7 +13,7 @@ PUSH="                         "
 
 whoami | grep 'root' &> /dev/null
 	if [[ $? != 0 ]]; then
-		echo -e "${RED}Error${NC}: root required"
+		echo -e "${RED}Error${NC}: root required" && return
 	else :
 	fi 
 	
