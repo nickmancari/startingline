@@ -35,17 +35,22 @@ wget -q --spider google.com
 #
 #---Check for latest version of GO
 
+function scrape() {
+	wget -q https://golang.org/dl/ -O - | grep 'downloadBox.*linux' > tmp_file && cut tmp_file -d '"' -f 4
+}
 
+DOWNLOAD=${scrape}
 
 #---Done Checking Lastest Version
 #
 #---Run main body of script
-wget https://dl.google.com/go/go1.13.linux-amd64.tar.gz -P ~/ &&
-echo -e "${PUSH}${BLUE}You just downloaded Go.13${NC}"
+wget https://golang.org${DOWNLOAD} -P ~/ &&
+echo -e "${PUSH}${BLUE}You just downloaded ${DOWNLOAD}${NC}"
 sudo tar -C /usr/local -xzf ~/go1.13.linux-amd64.tar.gz &&
 echo "export PATH=$PATH:/usr/local/go/bin" >> /etc/profile && source /etc/profile &&
 go get github.com/fatih/color &&
-go run ${GPATH}/test_go.go	
+go run ${GPATH}/test_go.go
+rm -rf ${GPATH}/tmp_file
 # <-------Need further testing for items below this----->
 
 # echo "Setting up VIM plugin"
