@@ -14,7 +14,8 @@ PUSH="                         "
 whoami | grep 'root' &> /dev/null
 	if [[ $? != 0 ]]; then
 		echo -e "${RED}Error${NC}: root required" && return
-	else :
+	else 
+		:
 	fi 
 	
 find $PWD/Go/go_setup.sh &> /dev/null
@@ -27,10 +28,18 @@ find $PWD/Go/go_setup.sh &> /dev/null
 wget -q --spider google.com
 	if [[ $? != 0 ]] ; then
 		echo -e "${RED}Error${NC}: wget not installed" && return
-	else :
+	else 
+		:
 	fi
 #----Done Enviroment Check
 #
+#---Check for latest version of GO
+
+
+
+#---Done Checking Lastest Version
+#
+#---Run main body of script
 wget https://dl.google.com/go/go1.13.linux-amd64.tar.gz -P ~/ &&
 echo -e "${PUSH}${BLUE}You just downloaded Go.13${NC}"
 sudo tar -C /usr/local -xzf ~/go1.13.linux-amd64.tar.gz &&
