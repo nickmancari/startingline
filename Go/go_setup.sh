@@ -40,13 +40,13 @@ function scrape() {
 }
 
 DOWNLOAD=$(scrape)
-
+GODOWNLOAD=$(echo -e ${DOWNLOAD} | cut -c 5-)
 #---Done Checking Lastest Version
 #
 #---Run main body of script
 wget https://golang.org${DOWNLOAD} -P ~/ &&
-echo -e "${PUSH}${BLUE}You just downloaded ${DOWNLOAD}${NC}"
-#sudo tar -C /usr/local -xzf ~/go1.13.linux-amd64.tar.gz &&
+echo -e "${PUSH}${BLUE}You just downloaded ${GODOWNLOAD}${NC}"
+sudo tar -C /usr/local -xzf ~/${GODOWNLOAD} &&
 echo "export PATH=$PATH:/usr/local/go/bin" >> /etc/profile && source /etc/profile &&
 go get github.com/fatih/color &&
 go run ${GPATH}/test_go.go
