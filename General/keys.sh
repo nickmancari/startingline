@@ -10,7 +10,7 @@ echo -e "${PUSH}##########LETS MAKE SSH KEYS##########"
 echo "Do you want make an SSH key? [y/n] [press enter]"
 read -s YESORNO
 	if [[ $YESORNO == n ]]; then
-		exit 1
+		return
 	else :
 	fi
 

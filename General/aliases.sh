@@ -7,7 +7,7 @@ function aliasadd() {
 	printf "alias 'xx=clear'" >> ~/.bashrc &&
 		printf "\nfunction cds() {\ncd \$1 ; ls\n}" >> ~/.bashrc &&
 			printf "\nfunction cdx() {\nclear ; cd \$1 ; ls\n}" >> ~/.bashrc ;
-		source ~/.bashrc
+		exec $SHELL -l;
 }
 
 grep 'cds|xx|cdx' ~/.bashrc &> /dev/null
