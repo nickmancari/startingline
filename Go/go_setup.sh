@@ -39,12 +39,12 @@ function scrape() {
 	wget -q https://golang.org/dl/ -O - | grep 'downloadBox.*linux' > tmp_file && cut tmp_file -d '"' -f 4
 }
 
-DOWNLOAD=$(scrape)
-GODOWNLOAD=$(echo -e ${DOWNLOAD} | cut -c 5-)
+GODOWNLOAD=$(echo -e $(scrape) | cut -c 5-)
+
 #---Done Checking Lastest Version
 #
 #---Run main body of script
-wget https://golang.org${DOWNLOAD} -P ~/ &&
+wget https://golang.org/dl/${GODOWNLOAD} -P ~/ &&
 echo -e "${PUSH}${BLUE}You just downloaded ${GODOWNLOAD}${NC}"
 sudo tar -C /usr/local -xzf ~/${GODOWNLOAD} &&
 echo "export PATH=$PATH:/usr/local/go/bin" >> /etc/profile && source /etc/profile &&

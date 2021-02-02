@@ -4,4 +4,4 @@ function scrape() {
 }
 DOWNLOAD=`echo -e "$(scrape)"`
 printf "${DOWNLOAD}\n"
-echo -e ${DOWNLOAD} | cut -c 5-
+echo -e $(scrape) | cut -c 5-
