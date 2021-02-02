@@ -9,5 +9,5 @@ import (
 
 
 func main() {
-	color.Cyan("                          ((((((((Go is now installed))))))))")
+	color.Cyan("\n                                 ((((((((Go is now installed))))))))")
 }
