@@ -6,7 +6,7 @@
 # Instructions:
 Download the repository:
 ```
-$ git clone https://github.com/nickmancari/startlingline
+$ git clone https://github.com/nickmancari/startlingline.git
 ```
 `cd` into the `startingline` directory
 
