@@ -6,13 +6,13 @@
 function aliasadd() {
 	printf "alias 'xx=clear'" >> ~/.bashrc &&
 		printf "\nfunction cds() {\ncd \$1 ; ls\n}" >> ~/.bashrc &&
-			printf "\nfunction cdx() {\nclear ; cd \$1 ; ls\n}" >> ~/.bashrc ;
-		exec $SHELL -l && return
+			printf "\nfunction cdx() {\nclear ; cd \$1 ; ls\n}" >> ~/.bashrc &&
+		source ~/.bashrc
 }
 
 grep -E 'cds|xx|cdx' ~/.bashrc &> /dev/null
 if [[ $? != 0 ]]; then
-	$(aliasadd);
+	$(aliasadd) && exec bash && return
 else
 	echo "Aliases already exist. Nothing to create."
 fi
