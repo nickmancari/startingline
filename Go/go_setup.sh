@@ -13,7 +13,7 @@ PUSH="                         "
 
 whoami | grep 'root' &> /dev/null
 	if [[ $? != 0 ]]; then
-		echo -e "${RED}Error${NC}: root required" && return 1
+		echo -e "${RED}Error${NC}: root required" && return
 	else 
 		:
 	fi 
@@ -27,7 +27,7 @@ find $PWD/Go/go_setup.sh &> /dev/null
 	
 wget -q --spider google.com
 	if [[ $? != 0 ]] ; then
-		echo -e "${RED}Error${NC}: wget not installed" && return 1
+		echo -e "${RED}Error${NC}: wget not installed" && return
 	else 
 		:
 	fi
